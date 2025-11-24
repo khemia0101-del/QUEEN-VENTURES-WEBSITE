@@ -479,6 +479,11 @@ export default function HomePage() {
                   <h3 className="text-xl font-bold text-foreground mb-4">Queen Ventures</h3>
                   <div className="space-y-3 text-muted-foreground">
                     <p>8 The Green<br />Dover, DE 19901</p>
+                    <p>
+                      <a href="mailto:info@queenventures.org" className="text-primary hover:underline">
+                        info@queenventures.org
+                      </a>
+                    </p>
                     <p>EIN: 33-2444800</p>
                     <p>501(c)(3) Public Charity</p>
                   </div>

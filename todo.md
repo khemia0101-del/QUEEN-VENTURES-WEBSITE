@@ -20,3 +20,6 @@
 - [x] Backend API endpoints for form submissions
 - [x] Success confirmation messages
 - [x] Admin view to see applications (optional)
+
+## Contact Information Updates
+- [x] Update contact section with info@queenventures.org email
