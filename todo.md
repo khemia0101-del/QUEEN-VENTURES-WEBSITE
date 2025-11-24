@@ -11,3 +11,12 @@
 - [x] Professional color scheme and branding
 - [x] Navigation menu
 - [x] High-quality images and visual assets
+
+## User Registration Features
+- [x] Database schema for Mission Forward applications
+- [x] Database schema for Grantflow waitlist
+- [x] Mission Forward application form with validation
+- [x] Grantflow waitlist sign-up form
+- [x] Backend API endpoints for form submissions
+- [x] Success confirmation messages
+- [x] Admin view to see applications (optional)

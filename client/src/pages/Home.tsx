@@ -56,12 +56,12 @@ export default function HomePage() {
               Queen Ventures transforms lives through financial literacy education, homeownership pathways, and innovative community development programs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8">
-                <a href="#mission-forward" className="flex items-center gap-2">
-                  Learn About Mission Forward
-                  <ArrowRight className="h-5 w-5" />
-                </a>
-              </Button>
+              <Link href="/mission-forward/apply">
+                <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 w-full sm:w-auto">
+                  Apply to Mission Forward
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 text-lg px-8">
                 <a href="#about">Our Mission</a>
               </Button>
@@ -356,12 +356,12 @@ export default function HomePage() {
             <p className="text-xl text-white/90 max-w-3xl mx-auto mb-6">
               Cloud 100's CEO is a former foster youth and U.S. Navy veteran who understands firsthand the barriers and opportunities facing both populations served by Mission Forward. She embodies the transformation possible when young people receive the right support, training, and opportunities.
             </p>
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-              <a href="https://projectcloud100.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+            <a href="https://projectcloud100.com" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90">
                 Visit Cloud 100
-                <ArrowRight className="h-5 w-5" />
-              </a>
-            </Button>
+                <ArrowRight className="h-5 w-5 ml-2" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
@@ -452,10 +452,12 @@ export default function HomePage() {
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Grantflow is currently in development. Join our waitlist to be notified when we launch and receive exclusive early access benefits.
               </p>
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                Join the Waitlist
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </Button>
+              <Link href="/grantflow/waitlist">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90">
+                  Join the Waitlist
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

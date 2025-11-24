@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, missionForwardApplications, InsertMissionForwardApplication, grantflowWaitlist, InsertGrantflowWaitlistEntry } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,46 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+/**
+ * Mission Forward Applications
+ */
+export async function createMissionForwardApplication(application: InsertMissionForwardApplication) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  
+  const result = await db.insert(missionForwardApplications).values(application);
+  return result;
+}
+
+export async function getAllMissionForwardApplications() {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  
+  return await db.select().from(missionForwardApplications);
+}
+
+/**
+ * Grantflow Waitlist
+ */
+export async function createGrantflowWaitlistEntry(entry: InsertGrantflowWaitlistEntry) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  
+  const result = await db.insert(grantflowWaitlist).values(entry);
+  return result;
+}
+
+export async function getAllGrantflowWaitlistEntries() {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  
+  return await db.select().from(grantflowWaitlist);
+}

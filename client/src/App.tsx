@@ -5,12 +5,16 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import HomePage from "./pages/Home";
+import MissionForwardApplyPage from "./pages/MissionForwardApply";
+import GrantflowWaitlistPage from "./pages/GrantflowWaitlist";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={HomePage} />
+      <Route path={"/mission-forward/apply"} component={MissionForwardApplyPage} />
+      <Route path={"/grantflow/waitlist"} component={GrantflowWaitlistPage} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
