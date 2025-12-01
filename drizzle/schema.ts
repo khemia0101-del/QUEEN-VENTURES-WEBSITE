@@ -68,3 +68,39 @@ export const grantflowWaitlist = mysqlTable("grantflow_waitlist", {
 
 export type GrantflowWaitlistEntry = typeof grantflowWaitlist.$inferSelect;
 export type InsertGrantflowWaitlistEntry = typeof grantflowWaitlist.$inferInsert;
+
+/**
+ * Donations tracking
+ * Stores essential Stripe identifiers and donor information
+ */
+export const donations = mysqlTable("donations", {
+  id: int("id").autoincrement().primaryKey(),
+  stripePaymentIntentId: varchar("stripe_payment_intent_id", { length: 255 }).notNull().unique(),
+  stripeCustomerId: varchar("stripe_customer_id", { length: 255 }),
+  donorName: varchar("donor_name", { length: 255 }),
+  donorEmail: varchar("donor_email", { length: 320 }).notNull(),
+  amountCents: int("amount_cents").notNull(),
+  currency: varchar("currency", { length: 3 }).default("usd").notNull(),
+  donationType: mysqlEnum("donation_type", ["one_time", "recurring"]).default("one_time").notNull(),
+  status: mysqlEnum("status", ["pending", "succeeded", "failed"]).default("pending").notNull(),
+  metadata: text("metadata"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export type Donation = typeof donations.$inferSelect;
+export type InsertDonation = typeof donations.$inferInsert;
+
+/**
+ * Newsletter subscriptions
+ */
+export const newsletterSubscriptions = mysqlTable("newsletter_subscriptions", {
+  id: int("id").autoincrement().primaryKey(),
+  email: varchar("email", { length: 320 }).notNull().unique(),
+  name: varchar("name", { length: 255 }),
+  status: mysqlEnum("status", ["active", "unsubscribed"]).default("active").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().onUpdateNow().notNull(),
+});
+
+export type NewsletterSubscription = typeof newsletterSubscriptions.$inferSelect;
+export type InsertNewsletterSubscription = typeof newsletterSubscriptions.$inferInsert;

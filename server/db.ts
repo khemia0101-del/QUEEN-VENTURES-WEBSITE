@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, missionForwardApplications, InsertMissionForwardApplication, grantflowWaitlist, InsertGrantflowWaitlistEntry } from "../drizzle/schema";
+import { InsertUser, users, missionForwardApplications, InsertMissionForwardApplication, grantflowWaitlist, InsertGrantflowWaitlistEntry, donations, InsertDonation, newsletterSubscriptions, InsertNewsletterSubscription } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -131,4 +131,48 @@ export async function getAllGrantflowWaitlistEntries() {
   }
   
   return await db.select().from(grantflowWaitlist);
+}
+
+/**
+ * Donations
+ */
+export async function createDonation(donation: InsertDonation) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  
+  const result = await db.insert(donations).values(donation);
+  return result;
+}
+
+export async function getAllDonations() {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  
+  return await db.select().from(donations);
+}
+
+/**
+ * Newsletter Subscriptions
+ */
+export async function createNewsletterSubscription(subscription: InsertNewsletterSubscription) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  
+  const result = await db.insert(newsletterSubscriptions).values(subscription);
+  return result;
+}
+
+export async function getAllNewsletterSubscriptions() {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  
+  return await db.select().from(newsletterSubscriptions);
 }

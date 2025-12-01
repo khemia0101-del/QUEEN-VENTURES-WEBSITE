@@ -70,6 +70,80 @@ export const appRouter = router({
       return await db.getAllGrantflowWaitlistEntries();
     }),
   }),
+
+  donation: router({
+    createCheckoutSession: publicProcedure
+      .input(z.object({
+        amount: z.number().min(50, "Minimum donation is $0.50"),
+        donorName: z.string().optional(),
+        donorEmail: z.string().email(),
+        donationType: z.enum(["one_time", "recurring"]).default("one_time"),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const Stripe = (await import("stripe")).default;
+        const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+          apiVersion: "2025-11-17.clover",
+        });
+
+        const session = await stripe.checkout.sessions.create({
+          payment_method_types: ["card"],
+          line_items: [
+            {
+              price_data: {
+                currency: "usd",
+                product_data: {
+                  name: input.donationType === "recurring" ? "Monthly Donation to Queen Ventures" : "Donation to Queen Ventures",
+                  description: "Support our mission to empower communities through housing and technology.",
+                },
+                unit_amount: input.amount,
+                ...(input.donationType === "recurring" && {
+                  recurring: {
+                    interval: "month",
+                  },
+                }),
+              },
+              quantity: 1,
+            },
+          ],
+          mode: input.donationType === "recurring" ? "subscription" : "payment",
+          success_url: `${ctx.req.headers.origin}/donate/success?session_id={CHECKOUT_SESSION_ID}`,
+          cancel_url: `${ctx.req.headers.origin}/donate`,
+          customer_email: input.donorEmail,
+          metadata: {
+            donor_name: input.donorName || "",
+            donor_email: input.donorEmail,
+            donation_type: input.donationType,
+          },
+          allow_promotion_codes: true,
+        });
+
+        return { checkoutUrl: session.url };
+      }),
+    list: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") {
+        throw new Error("Unauthorized");
+      }
+      return await db.getAllDonations();
+    }),
+  }),
+
+  newsletter: router({
+    subscribe: publicProcedure
+      .input(z.object({
+        email: z.string().email("Valid email is required"),
+        name: z.string().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        await db.createNewsletterSubscription(input);
+        return { success: true };
+      }),
+    list: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") {
+        throw new Error("Unauthorized");
+      }
+      return await db.getAllNewsletterSubscriptions();
+    }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;

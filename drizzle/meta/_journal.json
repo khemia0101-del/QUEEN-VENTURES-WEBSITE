@@ -15,6 +15,13 @@
       "when": 1763987179279,
       "tag": "0001_blushing_proemial_gods",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1764584562708,
+      "tag": "0002_fancy_dakota_north",
+      "breakpoints": true
     }
   ]
 }

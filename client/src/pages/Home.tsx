@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_LOGO } from "@/const";
-import { ArrowRight, Building2, Crown, GraduationCap, Heart, Home, Rocket, Sparkles, Target, Users } from "lucide-react";
+import { ArrowRight, Building2, Crown, GraduationCap, Heart, Home, Rocket, Sparkles, Target, Users, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { Link } from "wouter";
 
 export default function HomePage() {
@@ -20,12 +21,18 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <div className="hidden md:flex items-center gap-6">
+            <nav className="hidden md:flex items-center gap-8">
               <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">About</a>
               <a href="#mission-forward" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Mission Forward</a>
               <a href="#grantflow" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Grantflow</a>
               <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Contact</a>
-            </div>
+              <Link href="/donate">
+                <Button size="sm" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
+                  <Heart className="h-4 w-4 mr-2" />
+                  Donate
+                </Button>
+              </Link>
+            </nav>
           </div>
         </div>
       </nav>
@@ -62,9 +69,12 @@ export default function HomePage() {
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 text-lg px-8">
-                <a href="#about">Our Mission</a>
-              </Button>
+              <Link href="/donate">
+                <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 text-lg px-8 w-full sm:w-auto">
+                  <Heart className="h-5 w-5 mr-2" />
+                  Donate Now
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -461,44 +471,49 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>      {/* Newsletter Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container">
+          <NewsletterSignup />
+        </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 md:py-28 bg-muted">
+      {/* Get In Touch Section */}
+      <section id="contact" className="py-20 bg-background">
         <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
               Get In Touch
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Interested in partnering with Queen Ventures or learning more about our programs? We'd love to hear from you.
             </p>
-            <div className="bg-background rounded-2xl p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-8 text-left">
-                <div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">Queen Ventures</h3>
-                  <div className="space-y-3 text-muted-foreground">
-                    <p>8 The Green<br />Dover, DE 19901</p>
-                    <p>
-                      <a href="mailto:info@queenventures.org" className="text-primary hover:underline">
-                        info@queenventures.org
-                      </a>
-                    </p>
-                    <p>EIN: 33-2444800</p>
-                    <p>501(c)(3) Public Charity</p>
-                  </div>
+          </div>
+          <div className="bg-background rounded-2xl p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 text-left">
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Queen Ventures</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <p>8 The Green<br />Dover, DE 19901</p>
+                  <p>
+                    <a href="mailto:info@queenventures.org" className="text-primary hover:underline">
+                      info@queenventures.org
+                    </a>
+                  </p>
+                  <p>EIN: 33-2444800</p>
+                  <p>501(c)(3) Public Charity</p>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-foreground mb-4">Cloud 100</h3>
-                  <div className="space-y-3 text-muted-foreground">
-                    <p>Program Operator & Training Provider</p>
-                    <p>
-                      <a href="https://projectcloud100.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                        projectcloud100.com
-                      </a>
-                    </p>
-                    <p>Monday-Friday, 9:00 AM - 5:00 PM</p>
-                  </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-4">Cloud 100</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <p>Program Operator & Training Provider</p>
+                  <p>
+                    <a href="https://projectcloud100.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                      projectcloud100.com
+                    </a>
+                  </p>
+                  <p>Monday-Friday, 9:00 AM - 5:00 PM</p>
                 </div>
               </div>
             </div>

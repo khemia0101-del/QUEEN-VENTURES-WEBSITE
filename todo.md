@@ -23,3 +23,19 @@
 
 ## Contact Information Updates
 - [x] Update contact section with info@queenventures.org email
+
+## Donation Features
+- [x] Stripe payment integration setup
+- [x] Donation page with multiple giving options
+- [x] One-time and recurring donation options
+- [x] Donation amount presets and custom amounts
+- [x] Thank you page after successful donation
+- [x] Database tracking for donations
+
+## Website Enhancements
+- [x] Impact statistics section
+- [ ] FAQ section for common questions
+- [x] Newsletter subscription form
+- [ ] Social media links in footer
+- [ ] Mobile menu for responsive navigation
+- [ ] Smooth scroll for anchor links
