@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, missionForwardApplications, InsertMissionForwardApplication, grantflowWaitlist, InsertGrantflowWaitlistEntry, donations, InsertDonation, newsletterSubscriptions, InsertNewsletterSubscription } from "../drizzle/schema";
+import { InsertUser, users, missionForwardApplications, InsertMissionForwardApplication, grantflowWaitlist, InsertGrantflowWaitlistEntry, donations, InsertDonation, newsletterSubscriptions, InsertNewsletterSubscription, chatConversations, InsertChatConversation, chatMessages, InsertChatMessage } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -175,4 +175,43 @@ export async function getAllNewsletterSubscriptions() {
   }
   
   return await db.select().from(newsletterSubscriptions);
+}
+
+/**
+ * Chat Conversations and Messages
+ */
+export async function getOrCreateConversation(sessionId: string) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  
+  const existing = await db.select().from(chatConversations).where(eq(chatConversations.sessionId, sessionId)).limit(1);
+  
+  if (existing.length > 0) {
+    return existing[0]!;
+  }
+  
+  const result = await db.insert(chatConversations).values({ sessionId });
+  const newConversation = await db.select().from(chatConversations).where(eq(chatConversations.sessionId, sessionId)).limit(1);
+  return newConversation[0]!;
+}
+
+export async function getConversationMessages(conversationId: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  
+  return await db.select().from(chatMessages).where(eq(chatMessages.conversationId, conversationId));
+}
+
+export async function createChatMessage(message: InsertChatMessage) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+  
+  const result = await db.insert(chatMessages).values(message);
+  return result;
 }

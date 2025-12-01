@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { APP_LOGO } from "@/const";
 import { ArrowRight, Building2, Crown, GraduationCap, Heart, Home, Rocket, Sparkles, Target, Users, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { AIChatWidget } from "@/components/AIChatWidget";
 import { Link } from "wouter";
 
 export default function HomePage() {
@@ -520,6 +521,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* AI Chat Widget */}
+      <AIChatWidget />
 
       {/* Footer */}
       <footer className="bg-foreground text-background py-12">

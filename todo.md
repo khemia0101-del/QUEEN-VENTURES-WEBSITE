@@ -39,3 +39,12 @@
 - [ ] Social media links in footer
 - [ ] Mobile menu for responsive navigation
 - [ ] Smooth scroll for anchor links
+
+## AI Chatbot Feature
+- [x] Database schema for chat messages and conversations
+- [x] Backend tRPC procedure for chat with LLM integration
+- [x] AI chatbot UI component with message history
+- [x] Chatbot button/widget on homepage
+- [x] System prompt with Queen Ventures information
+- [x] Conversation persistence
+- [x] Test chatbot responses

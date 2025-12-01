@@ -144,6 +144,108 @@ export const appRouter = router({
       return await db.getAllNewsletterSubscriptions();
     }),
   }),
+
+  chat: router({
+    sendMessage: publicProcedure
+      .input(z.object({
+        sessionId: z.string(),
+        message: z.string().min(1, "Message cannot be empty"),
+      }))
+      .mutation(async ({ input }) => {
+        const { invokeLLM } = await import("./_core/llm");
+        
+        // Get or create conversation
+        const conversation = await db.getOrCreateConversation(input.sessionId);
+        
+        // Save user message
+        await db.createChatMessage({
+          conversationId: conversation.id,
+          role: "user",
+          content: input.message,
+        });
+        
+        // Get conversation history
+        const messages = await db.getConversationMessages(conversation.id);
+        
+        // Build message history for LLM
+        const llmMessages = [
+          {
+            role: "system" as const,
+            content: `You are a helpful assistant for Queen Ventures, a 501(c)(3) nonprofit community development association (EIN: 33-2444800). Your role is to answer questions about our programs and services.
+
+KEY INFORMATION:
+
+**About Queen Ventures:**
+- Mission: Empowering communities through housing and technology
+- Focus areas: Financial literacy, stewardship pathways, and community development
+- We provide stable housing and technology training to foster youth and veterans
+
+**Mission Forward Program:**
+- 180-day comprehensive program for foster youth (ages 18-24) and veterans
+- Partnership with Cloud 100 (program operator and training provider)
+- Two housing locations: Georgia and Hawaii
+- Provides:
+  * Stable housing for 6 months
+  * Technology skills training (Cloud computing, AI/ML, cybersecurity)
+  * Career development and job placement support
+  * Life skills and financial literacy training
+- Phase 1 (Days 1-90): Foundation building with housing, orientation, and basic tech training
+- Phase 2 (Days 91-180): Advanced training, certifications, and job placement
+- Founded by Jaaniyah Walker to break cycles of instability
+- Application available at the website
+
+**Grantflow (Coming Soon):**
+- Fully automated grant identification and submission software
+- Helps nonprofits and organizations streamline grant applications
+- Features: AI-powered grant matching, automated application drafting, deadline tracking
+- Currently accepting waitlist sign-ups
+
+**How to Support:**
+- Donations: One-time or monthly recurring donations accepted
+- All donations are tax-deductible
+- Donation impact: $50 = training materials, $250 = one week housing, $1,000 = one month of full program
+- Contact: info@queenventures.org
+- Location: 8 The Green, Dover, DE 19901
+
+Be friendly, professional, and concise. If asked about topics outside Queen Ventures' scope, politely redirect to our programs. Encourage visitors to apply to Mission Forward, join the Grantflow waitlist, or donate.`,
+          },
+          ...messages.map(msg => ({
+            role: msg.role as "user" | "assistant",
+            content: msg.content,
+          })),
+        ];
+        
+        // Get AI response
+        const response = await invokeLLM({
+          messages: llmMessages,
+        });
+        
+        const assistantMessageContent = response.choices[0]?.message?.content;
+        const assistantMessage = typeof assistantMessageContent === "string" 
+          ? assistantMessageContent 
+          : "I'm sorry, I couldn't generate a response. Please try again.";
+        
+        // Save assistant message
+        await db.createChatMessage({
+          conversationId: conversation.id,
+          role: "assistant",
+          content: assistantMessage,
+        });
+        
+        return {
+          message: assistantMessage,
+        };
+      }),
+    getHistory: publicProcedure
+      .input(z.object({
+        sessionId: z.string(),
+      }))
+      .query(async ({ input }) => {
+        const conversation = await db.getOrCreateConversation(input.sessionId);
+        const messages = await db.getConversationMessages(conversation.id);
+        return messages;
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;
