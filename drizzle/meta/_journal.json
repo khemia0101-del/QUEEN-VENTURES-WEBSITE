@@ -29,6 +29,13 @@
       "when": 1764585312320,
       "tag": "0003_omniscient_shiva",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1765690901581,
+      "tag": "0004_curved_vector",
+      "breakpoints": true
     }
   ]
 }

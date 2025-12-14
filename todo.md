@@ -48,3 +48,22 @@
 - [x] System prompt with Queen Ventures information
 - [x] Conversation persistence
 - [x] Test chatbot responses
+
+## SEO Improvements
+- [x] Meta tags (title, description, keywords) for all pages
+- [x] Open Graph tags for social media sharing
+- [x] Structured data (JSON-LD) for organization
+- [x] Sitemap.xml generation
+- [x] Robots.txt configuration
+- [ ] Semantic HTML improvements
+- [ ] Alt text for all images
+
+## AI-Generated Newsletter System
+- [x] Database schema for newsletter editions
+- [x] AI newsletter generation with LLM
+- [x] Newsletter content about AI automation and program topics
+- [ ] Email sending integration
+- [ ] Admin interface to generate and send newsletters
+- [x] Newsletter archive page
+- [x] Newsletter detail pages for SEO
+- [ ] Scheduled newsletter generation

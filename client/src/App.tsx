@@ -9,6 +9,8 @@ import MissionForwardApplyPage from "./pages/MissionForwardApply";
 import GrantflowWaitlistPage from "./pages/GrantflowWaitlist";
 import DonatePage from "./pages/Donate";
 import DonateSuccessPage from "./pages/DonateSuccess";
+import NewsletterArchivePage from "./pages/NewsletterArchive";
+import NewsletterDetailPage from "./pages/NewsletterDetail";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -19,6 +21,8 @@ function Router() {
       <Route path={"/grantflow/waitlist"} component={GrantflowWaitlistPage} />
       <Route path={"/donate"} component={DonatePage} />
       <Route path={"/donate/success"} component={DonateSuccessPage} />
+      <Route path={"/newsletter"} component={NewsletterArchivePage} />
+      <Route path={"/newsletter/:id"} component={NewsletterDetailPage} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

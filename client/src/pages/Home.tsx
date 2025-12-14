@@ -4,11 +4,15 @@ import { APP_LOGO } from "@/const";
 import { ArrowRight, Building2, Crown, GraduationCap, Heart, Home, Rocket, Sparkles, Target, Users, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { AIChatWidget } from "@/components/AIChatWidget";
+import { SEO } from "@/components/SEO";
+import { StructuredData } from "@/components/StructuredData";
 import { Link } from "wouter";
 
 export default function HomePage() {
   return (
     <div className="min-h-screen">
+      <SEO />
+      <StructuredData />
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="container">
@@ -26,6 +30,9 @@ export default function HomePage() {
               <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">About</a>
               <a href="#mission-forward" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Mission Forward</a>
               <a href="#grantflow" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Grantflow</a>
+              <Link href="/newsletter">
+                <span className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer">Newsletter</span>
+              </Link>
               <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Contact</a>
               <Link href="/donate">
                 <Button size="sm" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">

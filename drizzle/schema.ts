@@ -128,3 +128,21 @@ export const chatMessages = mysqlTable("chat_messages", {
 
 export type ChatMessage = typeof chatMessages.$inferSelect;
 export type InsertChatMessage = typeof chatMessages.$inferInsert;
+
+/**
+ * Newsletter editions
+ */
+export const newsletterEditions = mysqlTable("newsletter_editions", {
+  id: int("id").autoincrement().primaryKey(),
+  title: varchar("title", { length: 255 }).notNull(),
+  content: text("content").notNull(),
+  htmlContent: text("html_content"),
+  subject: varchar("subject", { length: 255 }).notNull(),
+  status: mysqlEnum("status", ["draft", "sent"]).default("draft").notNull(),
+  sentAt: timestamp("sent_at"),
+  recipientCount: int("recipient_count").default(0),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export type NewsletterEdition = typeof newsletterEditions.$inferSelect;
+export type InsertNewsletterEdition = typeof newsletterEditions.$inferInsert;

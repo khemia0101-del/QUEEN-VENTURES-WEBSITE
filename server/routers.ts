@@ -246,6 +246,142 @@ Be friendly, professional, and concise. If asked about topics outside Queen Vent
         return messages;
       }),
   }),
+
+  newsletterEdition: router({
+    generate: protectedProcedure
+      .input(z.object({
+        topic: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new Error("Unauthorized");
+        }
+
+        const { invokeLLM } = await import("./_core/llm");
+
+        const topicPrompt = input.topic 
+          ? `Focus on: ${input.topic}` 
+          : "Choose a relevant topic from AI automation, cloud computing, cybersecurity, machine learning, or career development in tech.";
+
+        const prompt = `You are writing a newsletter for Queen Ventures, a nonprofit that provides housing and technology training to foster youth and veterans through the Mission Forward program.
+
+Create an engaging, informative newsletter edition about technology and career development. ${topicPrompt}
+
+The newsletter should:
+- Be 600-800 words
+- Include an attention-grabbing title
+- Have 3-4 main sections with subheadings
+- Discuss practical applications and real-world examples
+- Relate content back to Mission Forward program topics (Cloud Computing, AI/ML, Cybersecurity)
+- Include actionable tips or insights
+- End with a call-to-action encouraging readers to support Queen Ventures or apply to Mission Forward
+- Use an encouraging, educational tone
+- Format in Markdown
+
+Provide the response in this exact JSON format:
+{
+  "title": "Newsletter Title Here",
+  "subject": "Email subject line (50 chars max)",
+  "content": "Full newsletter content in Markdown format"
+}`;
+
+        const response = await invokeLLM({
+          messages: [
+            {
+              role: "user",
+              content: prompt,
+            },
+          ],
+          response_format: {
+            type: "json_schema",
+            json_schema: {
+              name: "newsletter",
+              strict: true,
+              schema: {
+                type: "object",
+                properties: {
+                  title: { type: "string" },
+                  subject: { type: "string" },
+                  content: { type: "string" },
+                },
+                required: ["title", "subject", "content"],
+                additionalProperties: false,
+              },
+            },
+          },
+        });
+
+        if (!response.choices || response.choices.length === 0) {
+          throw new Error("Failed to generate newsletter: No response from LLM");
+        }
+
+        const messageContent = response.choices[0]?.message?.content;
+        const newsletterData = typeof messageContent === "string" 
+          ? JSON.parse(messageContent) 
+          : null;
+
+        if (!newsletterData) {
+          throw new Error("Failed to generate newsletter: Invalid response format");
+        }
+
+        // Create newsletter edition
+        await db.createNewsletterEdition({
+          title: newsletterData.title,
+          subject: newsletterData.subject,
+          content: newsletterData.content,
+          status: "draft",
+        });
+
+        return newsletterData;
+      }),
+
+    list: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") {
+        throw new Error("Unauthorized");
+      }
+      return await db.getAllNewsletterEditions();
+    }),
+
+    getPublished: publicProcedure.query(async () => {
+      return await db.getPublishedNewsletterEditions();
+    }),
+
+    getById: publicProcedure
+      .input(z.object({
+        id: z.number(),
+      }))
+      .query(async ({ input }) => {
+        const edition = await db.getNewsletterEditionById(input.id);
+        if (!edition || edition.status !== "sent") {
+          throw new Error("Newsletter not found");
+        }
+        return edition;
+      }),
+
+    markAsSent: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new Error("Unauthorized");
+        }
+
+        const subscribers = await db.getAllNewsletterSubscriptions();
+        const activeSubscribers = subscribers.filter(s => s.status === "active");
+
+        await db.updateNewsletterEdition(input.id, {
+          status: "sent",
+          sentAt: new Date(),
+          recipientCount: activeSubscribers.length,
+        });
+
+        // TODO: Implement actual email sending here
+        // For now, just mark as sent
+
+        return { success: true, recipientCount: activeSubscribers.length };
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;
