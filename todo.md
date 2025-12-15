@@ -88,3 +88,10 @@
 - [x] Create 6 unique newsletters with 2025 dates
 - [x] Ensure topics are high-traffic and SEO-optimized
 - [x] Align content with Queen Ventures mission
+
+## Program-Focused Newsletters for Discovery
+- [x] Create newsletter about Mission Forward program (for participants)
+- [x] Create newsletter about Queen Ventures impact (for grant makers)
+- [x] Optimize for participant search terms (foster youth tech training, veteran housing programs, etc.)
+- [x] Optimize for grant maker search terms (nonprofit workforce development, foster care outcomes, etc.)
+- [x] Insert newsletters into database
