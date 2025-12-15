@@ -95,3 +95,11 @@
 - [x] Optimize for participant search terms (foster youth tech training, veteran housing programs, etc.)
 - [x] Optimize for grant maker search terms (nonprofit workforce development, foster care outcomes, etc.)
 - [x] Insert newsletters into database
+
+## Newsletter Navigation Bug
+- [x] Check newsletter link visibility in navigation
+- [x] Ensure Newsletter is prominently displayed in header nav
+- [x] Add mobile hamburger menu with all nav links
+- [x] Add Latest Newsletter section on homepage with article previews
+- [x] Test on mobile viewport
+- [x] Verify link works correctly

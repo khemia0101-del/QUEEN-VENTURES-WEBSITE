@@ -1,31 +1,38 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_LOGO } from "@/const";
-import { ArrowRight, Building2, Crown, GraduationCap, Heart, Home, Rocket, Sparkles, Target, Users, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { ArrowRight, Building2, Crown, GraduationCap, Heart, Home, Rocket, Sparkles, Target, Users, Facebook, Twitter, Linkedin, Instagram, Menu, X, Mail, Newspaper, Calendar } from "lucide-react";
 import { NewsletterSignup } from "@/components/NewsletterSignup";
 import { AIChatWidget } from "@/components/AIChatWidget";
 import { SEO } from "@/components/SEO";
 import { StructuredData } from "@/components/StructuredData";
 import { Link } from "wouter";
+import { trpc } from "@/lib/trpc";
 
 export default function HomePage() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { data: newsletters } = trpc.newsletterEdition.getPublished.useQuery();
+
   return (
     <div className="min-h-screen">
       <SEO />
       <StructuredData />
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
         <div className="container">
           <div className="flex items-center justify-between h-16">
             <Link href="/">
               <div className="flex items-center gap-3 cursor-pointer">
                 <img src={APP_LOGO} alt="Queen Ventures" className="h-10 w-10" />
-                <div>
+                <div className="hidden sm:block">
                   <div className="font-bold text-lg text-foreground">Queen Ventures</div>
                   <div className="text-xs text-muted-foreground">Community Development Association</div>
                 </div>
               </div>
             </Link>
+            
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
               <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">About</a>
               <a href="#mission-forward" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Mission Forward</a>
@@ -41,8 +48,79 @@ export default function HomePage() {
                 </Button>
               </Link>
             </nav>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6 text-foreground" />
+              ) : (
+                <Menu className="h-6 w-6 text-foreground" />
+              )}
+            </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-background border-t border-border">
+            <div className="container py-4 space-y-3">
+              <a 
+                href="#about" 
+                className="block py-3 px-4 text-base font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About
+              </a>
+              <a 
+                href="#mission-forward" 
+                className="block py-3 px-4 text-base font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Mission Forward
+              </a>
+              <a 
+                href="#grantflow" 
+                className="block py-3 px-4 text-base font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Grantflow
+              </a>
+              <Link href="/newsletter">
+                <span 
+                  className="block py-3 px-4 text-base font-medium text-primary hover:bg-primary/10 rounded-lg transition-colors cursor-pointer flex items-center gap-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Mail className="h-5 w-5" />
+                  Newsletter
+                </span>
+              </Link>
+              <a 
+                href="#contact" 
+                className="block py-3 px-4 text-base font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+              <div className="pt-2 space-y-2">
+                <Link href="/mission-forward/apply">
+                  <Button className="w-full bg-primary text-primary-foreground" onClick={() => setMobileMenuOpen(false)}>
+                    Apply to Mission Forward
+                  </Button>
+                </Link>
+                <Link href="/donate">
+                  <Button variant="outline" className="w-full border-secondary text-secondary-foreground" onClick={() => setMobileMenuOpen(false)}>
+                    <Heart className="h-4 w-4 mr-2" />
+                    Donate
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
@@ -479,10 +557,70 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>      {/* Newsletter Section */}
-      <section className="py-20 bg-muted/30">
+      </section>
+
+      {/* Latest Newsletters Section */}
+      <section id="newsletter" className="py-20 md:py-28 bg-muted/30">
         <div className="container">
-          <NewsletterSignup />
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-4">
+              <Newspaper className="h-4 w-4" />
+              <span className="text-sm font-semibold">Latest Insights</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              From Our Newsletter
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Stay informed with our latest articles on AI automation, cloud computing, career development, and financial literacy.
+            </p>
+          </div>
+
+          {/* Newsletter Articles Grid */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {newsletters?.slice(0, 3).map((newsletter) => (
+              <Link key={newsletter.id} href={`/newsletter/${newsletter.id}`}>
+                <Card className="h-full hover:border-primary transition-all hover:shadow-lg cursor-pointer group">
+                  <CardHeader>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                      <Calendar className="h-4 w-4" />
+                      {new Date(newsletter.sentAt || newsletter.createdAt).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}
+                    </div>
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors line-clamp-2">
+                      {newsletter.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="line-clamp-3">
+                      {newsletter.content.substring(0, 200).replace(/[#*]/g, '')}...
+                    </CardDescription>
+                    <div className="mt-4 text-primary font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Read More
+                      <ArrowRight className="h-4 w-4" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
+          {/* View All + Subscribe */}
+          <div className="text-center mb-12">
+            <Link href="/newsletter">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                View All Newsletters
+                <ArrowRight className="h-5 w-5 ml-2" />
+              </Button>
+            </Link>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="max-w-2xl mx-auto">
+            <NewsletterSignup />
+          </div>
         </div>
       </section>
 
