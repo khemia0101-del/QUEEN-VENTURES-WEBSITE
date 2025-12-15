@@ -76,3 +76,15 @@
 - [x] Generate newsletter on credit building
 - [x] Generate newsletter on foster care success stories
 - [x] Insert newsletters with backdated timestamps
+
+## Newsletter Display Bug
+- [x] Fix newsletter archive page not showing newsletters
+- [x] Verify newsletter data is in database
+- [x] Debug tRPC query issue
+
+## Newsletter Updates for 2025
+- [x] Research trending topics (AI, Trump policies, Elon Musk, etc.)
+- [x] Remove duplicate newsletters from database
+- [x] Create 6 unique newsletters with 2025 dates
+- [x] Ensure topics are high-traffic and SEO-optimized
+- [x] Align content with Queen Ventures mission
