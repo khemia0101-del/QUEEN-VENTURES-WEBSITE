@@ -298,7 +298,7 @@ export default function HomePage() {
               Mission Forward Initiative
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              A groundbreaking partnership between Queen Ventures and Cloud 100 that combines stable housing with cutting-edge technology training to create systematic pathways from crisis to prosperity.
+              Queen Ventures' flagship program that combines stable housing with cutting-edge technology training to create systematic pathways from crisis to prosperity for foster youth and veterans.
             </p>
           </div>
 
@@ -311,7 +311,7 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-foreground mb-6">The Dual-Powered Partnership</h3>
+              <h3 className="text-3xl font-bold text-foreground mb-6">Comprehensive Support Model</h3>
               <p className="text-muted-foreground mb-6">
                 Mission Forward serves foster youth aging out of care and transitioning veterans through a comprehensive 180-day residential program. This innovative model pairs veterans and foster youth as roommates and mentors, creating mutual support systems that benefit both populations.
               </p>
@@ -330,8 +330,8 @@ export default function HomePage() {
                     <Sparkles className="h-5 w-5 text-secondary-foreground" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground mb-1">Cloud 100 Provides</div>
-                    <div className="text-sm text-muted-foreground">Industry-recognized AI and cloud computing curriculum, comprehensive technology training, corporate partner network, entrepreneurship training with up to $25K seed funding, and mental health resources.</div>
+                    <div className="font-semibold text-foreground mb-1">Technology Training</div>
+                    <div className="text-sm text-muted-foreground">Industry-recognized AI and cloud computing curriculum, comprehensive technology training, entrepreneurship development with up to $25K seed funding, and mental health resources.</div>
                   </div>
                 </div>
               </div>
@@ -443,22 +443,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="bg-primary text-white rounded-2xl p-8 md:p-12 text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 mb-6">
-              <Users className="h-4 w-4" />
-              <span className="text-sm font-semibold">Partnership Highlight</span>
-            </div>
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">Founded by Janiyah Walker</h3>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-6">
-              Cloud 100's CEO is a former foster youth and U.S. Navy veteran who understands firsthand the barriers and opportunities facing both populations served by Mission Forward. She embodies the transformation possible when young people receive the right support, training, and opportunities.
-            </p>
-            <a href="https://projectcloud100.com" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                Visit Cloud 100
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </Button>
-            </a>
-          </div>
+
         </div>
       </section>
 
@@ -635,32 +620,19 @@ export default function HomePage() {
               Interested in partnering with Queen Ventures or learning more about our programs? We'd love to hear from you.
             </p>
           </div>
-          <div className="bg-background rounded-2xl p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-8 text-left">
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Queen Ventures</h3>
-                <div className="space-y-3 text-muted-foreground">
-                  <p>8 The Green<br />Dover, DE 19901</p>
-                  <p>
-                    <a href="mailto:info@queenventures.org" className="text-primary hover:underline">
-                      info@queenventures.org
-                    </a>
-                  </p>
-                  <p>EIN: 33-2444800</p>
-                  <p>501(c)(3) Public Charity</p>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-foreground mb-4">Cloud 100</h3>
-                <div className="space-y-3 text-muted-foreground">
-                  <p>Program Operator & Training Provider</p>
-                  <p>
-                    <a href="https://projectcloud100.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                      projectcloud100.com
-                    </a>
-                  </p>
-                  <p>Monday-Friday, 9:00 AM - 5:00 PM</p>
-                </div>
+          <div className="bg-background rounded-2xl p-8 md:p-12 max-w-2xl mx-auto">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-6">Queen Ventures</h3>
+              <div className="space-y-4 text-muted-foreground">
+                <p>8 The Green<br />Dover, DE 19901</p>
+                <p>
+                  <a href="mailto:info@queenventures.org" className="text-primary hover:underline text-lg">
+                    info@queenventures.org
+                  </a>
+                </p>
+                <p>EIN: 33-2444800</p>
+                <p>501(c)(3) Public Charity</p>
+                <p className="pt-4 border-t border-border">Monday-Friday, 9:00 AM - 5:00 PM</p>
               </div>
             </div>
           </div>

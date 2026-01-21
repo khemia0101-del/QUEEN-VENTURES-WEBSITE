@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE newsletter_editions \nSET content = REPLACE(REPLACE(REPLACE(content, 'Cloud 100', 'Queen Ventures'), 'cloud 100', 'Queen Ventures'), 'Cloud100', 'QueenVentures')\nWHERE content LIKE '%Cloud 100%' OR content LIKE '%Cloud100%' OR content LIKE '%cloud 100%';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3tew2ahF4Y5KvBa.9beb329cb281 --database GS3eerfLCARChtn3VvPsEL --execute UPDATE newsletter_editions \nSET content = REPLACE(REPLACE(REPLACE(content, 'Cloud 100', 'Queen Ventures'), 'cloud 100', 'Queen Ventures'), 'Cloud100', 'QueenVentures')\nWHERE content LIKE '%Cloud 100%' OR content LIKE '%Cloud100%' OR content LIKE '%cloud 100%';",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 120
+}
