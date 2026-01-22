@@ -119,3 +119,11 @@
 - [x] Update newsletter content that mentions Cloud 100
 - [x] Review and update all pages for Cloud 100 references
 - [x] Update structured data and SEO content
+
+## Update Newsletter Dates
+- [x] Update newsletter publication dates from 2024 to 2025-2026
+- [x] Ensure dates align with content topics (Trump AI order, current events)
+
+## Update Newsletter Dates
+- [x] Update newsletter publication dates from 2024 to 2025-2026
+- [x] Ensure dates align with content topics (Trump AI order, current events)
