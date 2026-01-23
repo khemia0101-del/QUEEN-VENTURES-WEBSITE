@@ -127,3 +127,6 @@
 ## Update Newsletter Dates
 - [x] Update newsletter publication dates from 2024 to 2025-2026
 - [x] Ensure dates align with content topics (Trump AI order, current events)
+
+## Add Queen Rentals Link
+- [x] Add Queen Rentals link to footer (subtle placement)

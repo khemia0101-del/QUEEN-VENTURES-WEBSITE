@@ -653,8 +653,13 @@ export default function HomePage() {
                 <div className="text-sm text-background/70">Community Development Association</div>
               </div>
             </div>
-            <div className="text-sm text-background/70">
+            <div className="text-sm text-background/70 text-center md:text-right">
               © 2023-2025 Queen Ventures. All rights reserved. | 501(c)(3) Nonprofit Organization
+              <br className="md:hidden" />
+              <span className="hidden md:inline"> | </span>
+              <a href="https://queenrentals-jztml8uj.manus.space" target="_blank" rel="noopener noreferrer" className="text-background/50 hover:text-background/70 transition-colors">
+                Housing Resources
+              </a>
             </div>
           </div>
         </div>
