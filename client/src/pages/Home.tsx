@@ -657,8 +657,8 @@ export default function HomePage() {
               © 2023-2025 Queen Ventures. All rights reserved. | 501(c)(3) Nonprofit Organization
               <br className="md:hidden" />
               <span className="hidden md:inline"> | </span>
-              <a href="https://queenrentals-jztml8uj.manus.space" target="_blank" rel="noopener noreferrer" className="text-background/50 hover:text-background/70 transition-colors">
-                Housing Resources
+              <a href="/rentals" className="text-background/50 hover:text-background/70 transition-colors">
+                Housing Application
               </a>
             </div>
           </div>

@@ -130,3 +130,8 @@
 
 ## Add Queen Rentals Link
 - [x] Add Queen Rentals link to footer (subtle placement)
+
+## Create Rentals Page
+- [x] Create /rentals page with embedded Queen Rentals form
+- [x] Update footer link to point to /rentals instead of external URL
+- [x] Add route to App.tsx
