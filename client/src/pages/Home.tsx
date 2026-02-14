@@ -128,7 +128,7 @@ export default function HomePage() {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(/images/hero-bg.jpg)',
+            backgroundImage: 'url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/UBTLDDNqWRfBKbwp.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -305,7 +305,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <img 
-                src="/images/mentorship.jpg" 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/TiQPbVcinZgOEkYR.jpg" 
                 alt="Veteran-Foster Youth Mentorship" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
@@ -466,7 +466,7 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-12">
               <img 
-                src="/images/grantflow-preview.jpg" 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/FKjXBsLzRIxyHpFX.jpg" 
                 alt="Grantflow Software Preview" 
                 className="w-full h-auto"
               />

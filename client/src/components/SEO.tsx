@@ -10,9 +10,9 @@ interface SEOProps {
 }
 
 export function SEO({
-  title = "Queen Ventures - Empowering Communities Through Housing & Technology",
-  description = "Queen Ventures is a 501(c)(3) nonprofit providing stable housing and technology training to foster youth and veterans through the Mission Forward program. Comprehensive career development and pathways to prosperity.",
-  keywords = "nonprofit, community development, foster youth, veterans, technology training, housing support, Mission Forward, AI training, cloud computing, career development, grant management, Grantflow, financial literacy, entrepreneurship",
+  title = "Queen Ventures - Foster Youth & Veteran Tech Training",
+  description = "Nonprofit providing housing, AI training, and career pathways to foster youth and veterans through the Mission Forward program.",
+  keywords = "foster youth, veterans, technology training, housing, nonprofit, career development",
   ogImage = "/images/logo.png",
   ogType = "website",
   canonical,
