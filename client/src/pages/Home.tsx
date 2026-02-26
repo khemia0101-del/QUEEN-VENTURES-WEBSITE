@@ -413,6 +413,54 @@ export default function HomePage() {
             </div>
           </div>
 
+          <div className="mb-12">
+            <h3 className="text-3xl font-bold text-foreground mb-8 text-center">Our Housing Portfolio</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/PSuyXUzpsopCCVqZ.png" 
+                  alt="Luxury Beachfront Property - Hawaii" 
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                  <div className="p-4 text-white w-full">
+                    <h4 className="font-bold text-lg">Beachfront Residence</h4>
+                    <p className="text-sm text-white/80">Hawaii - Ocean View Living</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/iLoSuIoXbyfkeRMM.jpeg" 
+                  alt="Multi-Unit Residential Building - Georgia" 
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                  <div className="p-4 text-white w-full">
+                    <h4 className="font-bold text-lg">Multi-Unit Complex</h4>
+                    <p className="text-sm text-white/80">Georgia - Community Housing</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/ImDJTNWDSQwFKNho.png" 
+                  alt="Residential Home with Amenities" 
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                  <div className="p-4 text-white w-full">
+                    <h4 className="font-bold text-lg">Family Residence</h4>
+                    <p className="text-sm text-white/80">Spacious Home with Pool</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p className="text-center text-muted-foreground mt-6">Queen Ventures maintains a diverse real estate portfolio across multiple states, providing safe, stable housing for Mission Forward participants throughout their 180-day program.</p>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="relative rounded-2xl overflow-hidden">
               <img 

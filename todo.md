@@ -140,3 +140,9 @@
 - [x] Reduce keywords from 14 to 3-8 focused keywords (now 6 keywords)
 - [x] Optimize page title to 30-60 characters (now 54 characters)
 - [x] Optimize meta description to 50-160 characters (now 127 characters)
+
+
+## Add Property Photos
+- [x] Upload property photos to S3
+- [x] Add property photo gallery to Mission Forward section
+- [x] Add captions/descriptions for each property
