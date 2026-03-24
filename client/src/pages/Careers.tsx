@@ -254,7 +254,7 @@ export default function CareersPage() {
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">Required Experience</h4>
+                    <h4 className="font-semibold text-foreground mb-3">Preferred Experience</h4>
                     <ul className="space-y-2 text-muted-foreground">
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
