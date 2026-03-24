@@ -139,12 +139,12 @@ export default function HomePage() {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/UBTLDDNqWRfBKbwp.jpg)',
+            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663031027310/GS3eerfLCARChtn3VvPsEL/pasted_file_9JiSZs_image_47fabb40.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/75"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/70"></div>
         </div>
         
         <div className="container relative z-10">
