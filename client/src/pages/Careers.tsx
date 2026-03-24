@@ -213,8 +213,8 @@ export default function CareersPage() {
                 <CardHeader className="bg-gradient-to-r from-primary/5 to-secondary/5">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <CardTitle className="text-2xl mb-2">Director of Development & Capital Partnerships</CardTitle>
-                      <CardDescription className="text-base">Capital Partner / Deal Operator Role</CardDescription>
+                      <CardTitle className="text-2xl mb-2">Director of Development & Operations</CardTitle>
+                      <CardDescription className="text-base">Program Growth & Organizational Leadership Role</CardDescription>
                     </div>
                     <Briefcase className="h-8 w-8 text-primary flex-shrink-0" />
                   </div>
@@ -223,7 +223,7 @@ export default function CareersPage() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">The Opportunity</h4>
                     <p className="text-muted-foreground">
-                      Lead the structuring and execution of a multi-market capital strategy across our affordable housing and workforce development platform. Structure blended capital combining CDFI debt, bank financing (CRA, AHP), government grants, and impact/Opportunity Zone equity. This is a high-autonomy, deal-focused role with significant upside participation.
+                      Join Queen Ventures as Director of Development & Operations to scale our Mission Forward Initiative and expand our impact across Georgia, Hawaii, and Texas. You'll lead program development, build strategic partnerships with community organizations and employers, manage operations across multiple markets, and help us serve more foster youth and veterans. This is a mission-driven leadership role where your passion for community transformation directly impacts lives. You'll work alongside our founder on strategic growth while we maintain centralized financial management.
                     </p>
                   </div>
 
@@ -232,23 +232,23 @@ export default function CareersPage() {
                     <ul className="space-y-2 text-muted-foreground">
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Design and execute blended capital strategy across Georgia, Hawaii, and Texas</span>
+                        <span>Expand Mission Forward Initiative across Georgia, Hawaii, and Texas—recruit participants, manage program delivery, track outcomes</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Lead relationships with CDFIs, banks, government agencies, and impact investors</span>
+                        <span>Build partnerships with employers, vocational training providers, housing organizations, and community agencies</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Negotiate and close financing (debt, grants, equity)</span>
+                        <span>Oversee day-to-day operations across multiple markets—staff management, program quality, participant support</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Build and manage a pipeline of funding opportunities ($5M–$50M+)</span>
+                        <span>Develop and execute strategic plans for organizational growth and market expansion</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Integrate multi-market operations into unified capital strategy</span>
+                        <span>Collaborate with founder on mission strategy, community impact, and long-term vision</span>
                       </li>
                     </ul>
                   </div>
@@ -258,59 +258,59 @@ export default function CareersPage() {
                     <ul className="space-y-2 text-muted-foreground">
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Proven track record raising $5M–$50M+ in capital</span>
+                        <span>5+ years in nonprofit leadership, community development, or social impact organizations</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Deep expertise in affordable housing, community development, or structured finance</span>
+                        <span>Experience managing programs serving vulnerable populations (foster youth, veterans, low-income communities)</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Strong familiarity with CDFIs, HUD/HOME/CDBG programs, and blended capital structures</span>
+                        <span>Track record building partnerships with employers, government agencies, and community organizations</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Established network of funders, lenders, and institutional partners</span>
+                        <span>Experience with affordable housing, workforce development, or financial literacy programs</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Ability to close capital—not just source it</span>
+                        <span>Ability to manage operations across multiple locations and scale programs</span>
                       </li>
                     </ul>
                   </div>
 
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">Compensation</h4>
-                    <p className="text-muted-foreground mb-3">Performance-based with significant upside:</p>
+                    <p className="text-muted-foreground mb-3">Competitive nonprofit salary with benefits:</p>
                     <ul className="space-y-2 text-muted-foreground">
                       <li className="flex gap-3">
                         <span className="text-secondary mt-1">•</span>
-                        <span>Success Fee: 1%–3% of all capital raised</span>
+                        <span>Salary: $80K–$120K (based on experience)</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-secondary mt-1">•</span>
-                        <span>Milestone Bonuses: Paid at key funding thresholds</span>
+                        <span>Health insurance, retirement, and professional development</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-secondary mt-1">•</span>
-                        <span>Deferred Compensation: Accrued base ($100K+ equivalent) paid upon funding/refinance</span>
+                        <span>Performance bonuses tied to program growth and impact metrics</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-secondary mt-1">•</span>
-                        <span>Profit Participation: 5%–10% of project-level upside</span>
+                        <span>Remote-first with travel to Georgia, Hawaii, and Texas as needed</span>
                       </li>
                     </ul>
                   </div>
 
                   <div className="bg-primary/5 p-4 rounded-lg">
-                    <h4 className="font-semibold text-foreground mb-2">AI-First Platform</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Most Important Qualification</h4>
                     <p className="text-sm text-muted-foreground mb-3">
-                      Queen Ventures operates with AI-driven systems for grant writing, pipeline tracking, and outreach. You don't need to be an AI expert, but you should be comfortable learning quickly, working alongside automation, and directing AI outputs to increase efficiency and scale.
+                      Genuine passion for serving foster youth and veterans. You believe in their potential, understand the barriers they face, and are committed to building pathways to economic opportunity and stability. Professional experience matters, but your heart for this community is what drives success at Queen Ventures.
                     </p>
                   </div>
 
                   <div className="pt-4">
-                    <a href="mailto:info@queenventures.org?subject=Capital%20Partner%20–%20Application">
+                    <a href="mailto:info@queenventures.org?subject=Director%20of%20Development%20%26%20Operations%20–%20Application">
                       <Button className="w-full gap-2 bg-primary hover:bg-primary/90">
                         <Mail className="h-4 w-4" />
                         Apply Now
