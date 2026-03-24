@@ -12,6 +12,7 @@ import DonateSuccessPage from "./pages/DonateSuccess";
 import NewsletterArchivePage from "./pages/NewsletterArchive";
 import NewsletterDetailPage from "./pages/NewsletterDetail";
 import RentalsPage from "./pages/Rentals";
+import CareersPage from "./pages/Careers";
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -25,6 +26,7 @@ function Router() {
       <Route path={"/newsletter"} component={NewsletterArchivePage} />
       <Route path={"/newsletter/:id"} component={NewsletterDetailPage} />
       <Route path={"/rentals"} component={RentalsPage} />
+      <Route path={"/careers"} component={CareersPage} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

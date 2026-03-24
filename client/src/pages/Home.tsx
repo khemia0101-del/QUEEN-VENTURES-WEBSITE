@@ -40,6 +40,9 @@ export default function HomePage() {
               <Link href="/newsletter">
                 <span className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer">Newsletter</span>
               </Link>
+              <Link href="/careers">
+                <span className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer">Careers</span>
+              </Link>
               <a href="#contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">Contact</a>
               <Link href="/donate">
                 <Button size="sm" className="bg-secondary text-secondary-foreground hover:bg-secondary/90">
@@ -96,6 +99,14 @@ export default function HomePage() {
                 >
                   <Mail className="h-5 w-5" />
                   Newsletter
+                </span>
+              </Link>
+              <Link href="/careers">
+                <span 
+                  className="block py-3 px-4 text-base font-medium text-foreground hover:bg-muted rounded-lg transition-colors cursor-pointer"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Careers
                 </span>
               </Link>
               <a 
