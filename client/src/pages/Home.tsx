@@ -151,27 +151,27 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 text-secondary mb-6">
               <Crown className="h-4 w-4" />
-              <span className="text-sm font-semibold">Building Generational Wealth</span>
+              <span className="text-sm font-semibold">AI-Enabled Workforce Development</span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Empowering Communities Through Housing & Technology
+              Building Foundations. <span className="text-secondary">Reskilling</span> for the Future.
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
-              Queen Ventures transforms lives through financial literacy education, homeownership pathways, and innovative community development programs.
+              Queen Ventures is a 501(c)(3) nonprofit helping aging-out foster youth and veterans reskill for the AI-enabled economy. Through a foundation of stable housing and financial capability, coupled with hands-on AI implementation training, we empower our participants to transition into high-impact careers and entrepreneurship.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/mission-forward/apply">
+              <a href="#mission-forward">
                 <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-8 w-full sm:w-auto">
-                  Apply to Mission Forward
+                  Explore Our Programs
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
-              </Link>
-              <Link href="/donate">
+              </a>
+              <a href="#contact">
                 <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 text-lg px-8 w-full sm:w-auto">
-                  <Heart className="h-5 w-5 mr-2" />
-                  Donate Now
+                  <Users className="h-5 w-5 mr-2" />
+                  Partner With Us
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -186,10 +186,10 @@ export default function HomePage() {
               <span className="text-sm font-semibold">Our Mission</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Who We Are
+              Our Mission: Holistic Support Meets High-Tech Reskilling
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Queen Ventures is a 501(c)(3) nonprofit community development association dedicated to empowering disenfranchised communities through financial literacy and homeownership opportunities.
+              At Queen Ventures, we believe true economic mobility requires both a secure foundation and future-proof skills. We provide aging-out foster youth and veterans with comprehensive life support—rooted in housing initiatives, financial literacy, and community development.
             </p>
           </div>
 
@@ -242,7 +242,7 @@ export default function HomePage() {
               <div>
                 <h3 className="text-3xl font-bold text-foreground mb-4">Our Impact</h3>
                 <p className="text-muted-foreground mb-6">
-                  Established in May 2023, Queen Ventures operates nationally with a current focus on the Atlanta metropolitan area. We provide all services at no cost to participants, funded through grants, donations, and strategic partnerships.
+                  Established in May 2023, Queen Ventures operates nationally with a current focus on the Atlanta metropolitan area. Building on a foundation of housing and financial literacy, we are actively reskilling our participants for the AI-enabled workforce—providing hands-on training in AI agents, workflow automation, and practical implementation for businesses and nonprofits. We provide all services at no cost to participants, funded through grants, donations, and strategic partnerships.
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -306,10 +306,10 @@ export default function HomePage() {
               <span className="text-sm font-semibold">Flagship Program</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Mission Forward Initiative
+              Mission Forward: Applied AI & Career Reskilling
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Queen Ventures' flagship program that combines stable housing with cutting-edge technology training to create systematic pathways from crisis to prosperity for foster youth and veterans.
+              Our Mission Forward program is a structured reskilling pathway designed to turn potential into professional success. Rather than just teaching theory, we immerse our participants in applied technology, preparing them to solve real operational problems for organizations.
             </p>
           </div>
 
@@ -322,27 +322,45 @@ export default function HomePage() {
               />
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-foreground mb-6">Comprehensive Support Model</h3>
+              <h3 className="text-3xl font-bold text-foreground mb-6">Core Training Pillars</h3>
               <p className="text-muted-foreground mb-6">
-                Mission Forward serves foster youth aging out of care and transitioning veterans through a comprehensive 180-day residential program. This innovative model pairs veterans and foster youth as roommates and mentors, creating mutual support systems that benefit both populations.
+                Mission Forward serves foster youth aging out of care and transitioning veterans through a comprehensive 180-day residential program. We immerse participants in applied technology, preparing them to solve real operational problems for organizations.
               </p>
               <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Sparkles className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground mb-1">AI Agentic Implementation</div>
+                    <div className="text-sm text-muted-foreground">Learning to build, deploy, and manage AI agents to solve complex business challenges for real clients.</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="h-10 w-10 rounded-lg bg-secondary/20 flex items-center justify-center flex-shrink-0">
+                    <Target className="h-5 w-5 text-secondary-foreground" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-foreground mb-1">Workflow Automation</div>
+                    <div className="text-sm text-muted-foreground">Designing and streamlining operational processes for small businesses and nonprofits.</div>
+                  </div>
+                </div>
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Building2 className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground mb-1">Queen Ventures Provides</div>
-                    <div className="text-sm text-muted-foreground">$6.455M real estate portfolio generating $189K annual income, stable housing across Hawaii and Georgia, seller-financing homeownership pathways, and financial sovereignty framework.</div>
+                    <div className="font-semibold text-foreground mb-1">Cloud Fundamentals</div>
+                    <div className="text-sm text-muted-foreground">Hands-on experience with industry-standard cloud infrastructure (AWS, Azure, GCP).</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="h-10 w-10 rounded-lg bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                    <Sparkles className="h-5 w-5 text-secondary-foreground" />
+                    <GraduationCap className="h-5 w-5 text-secondary-foreground" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground mb-1">Technology Training</div>
-                    <div className="text-sm text-muted-foreground">Industry-recognized AI and cloud computing curriculum, comprehensive technology training, entrepreneurship development with up to $25K seed funding, and mental health resources.</div>
+                    <div className="font-semibold text-foreground mb-1">Applied Client Projects</div>
+                    <div className="text-sm text-muted-foreground">Paid consulting and real-world implementation projects that build a professional portfolio and generate income.</div>
                   </div>
                 </div>
               </div>
@@ -664,6 +682,26 @@ export default function HomePage() {
           {/* Newsletter Signup */}
           <div className="max-w-2xl mx-auto">
             <NewsletterSignup />
+          </div>
+        </div>
+      </section>
+
+      {/* Partnership Section */}
+      <section className="py-20 bg-gradient-to-br from-primary to-primary/80">
+        <div className="container">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Build the Future With Us
+            </h2>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
+              Queen Ventures welcomes partnerships with employers, technology providers, and community organizations to expand access to workforce-aligned AI reskilling. Whether through hiring our graduates, sponsoring applied community projects, or providing the enterprise hardware that powers our training, your partnership helps drive generational economic mobility.
+            </p>
+            <a href="mailto:info@queenventures.org?subject=Partnership%20Inquiry">
+              <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 text-lg px-10">
+                <Users className="h-5 w-5 mr-2" />
+                Contact Our Partnership Team
+              </Button>
+            </a>
           </div>
         </div>
       </section>
