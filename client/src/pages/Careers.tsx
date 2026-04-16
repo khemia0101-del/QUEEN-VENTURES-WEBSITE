@@ -87,10 +87,10 @@ export default function CareersPage() {
                 <span className="text-sm font-semibold text-primary">Join Our Team</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Build Generational Wealth with Queen Ventures
+                Join Our Mission to Transform Lives
               </h1>
               <p className="text-lg text-muted-foreground mb-8">
-                We're seeking experienced capital partners and operators to help scale our affordable housing and workforce development platform across multiple markets.
+                We're seeking a passionate, experienced nonprofit leader to serve as our Director of Programs — driving the growth of Mission Forward and expanding our impact across Georgia, Hawaii, and Texas.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="#open-positions" className="inline-flex items-center justify-center">
@@ -117,40 +117,40 @@ export default function CareersPage() {
                 <Card className="border-2">
                   <CardHeader>
                     <Target className="h-8 w-8 text-primary mb-2" />
-                    <CardTitle>Mission-Driven Impact</CardTitle>
+                    <CardTitle>Real Community Impact</CardTitle>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">
-                    Work on a platform that transforms lives by combining stable housing, technology training, and pathways to financial sovereignty for veterans and foster youth. Your work directly creates opportunity.
+                    Your work directly transforms lives. Every program you build, every partnership you forge, and every participant you serve creates a ripple effect of economic opportunity for foster youth and veterans.
                   </CardContent>
                 </Card>
 
                 <Card className="border-2">
                   <CardHeader>
                     <Zap className="h-8 w-8 text-secondary mb-2" />
-                    <CardTitle>AI-First Operations</CardTitle>
+                    <CardTitle>AI-Powered Programs</CardTitle>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">
-                    Leverage cutting-edge AI systems to automate grant writing, pipeline tracking, and outreach. Work smarter, not harder, and focus on high-value deal execution.
+                    Lead a first-of-its-kind AI reskilling program that equips participants with skills in AI agent implementation, workflow automation, and cloud fundamentals — positioning them for the jobs of tomorrow.
                   </CardContent>
                 </Card>
 
                 <Card className="border-2">
                   <CardHeader>
                     <Briefcase className="h-8 w-8 text-primary mb-2" />
-                    <CardTitle>Deal-Level Upside</CardTitle>
+                    <CardTitle>Competitive Compensation</CardTitle>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">
-                    Earn performance fees, milestone bonuses, deferred compensation, and profit participation. This isn't a traditional nonprofit role—it's a capital partnership with real financial upside.
+                    We offer a salary and housing stipend package that is above the industry median for this role, reflecting our commitment to attracting mission-aligned talent who deserve to be compensated fairly.
                   </CardContent>
                 </Card>
 
                 <Card className="border-2">
                   <CardHeader>
                     <Users className="h-8 w-8 text-secondary mb-2" />
-                    <CardTitle>Autonomous Leadership</CardTitle>
+                    <CardTitle>Executive-Level Autonomy</CardTitle>
                   </CardHeader>
                   <CardContent className="text-muted-foreground">
-                    High autonomy, high accountability. Lead capital strategy across multiple markets with the flexibility to operate independently and the support to scale.
+                    Report directly to the Founder and serve as the operational face of Queen Ventures. You'll have the authority to build teams, forge partnerships, and shape the direction of our programs.
                   </CardContent>
                 </Card>
               </div>
@@ -213,8 +213,8 @@ export default function CareersPage() {
                 <CardHeader className="bg-gradient-to-r from-primary/5 to-secondary/5">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <CardTitle className="text-2xl mb-2">Director of Development & Operations</CardTitle>
-                      <CardDescription className="text-base">Program Growth & Organizational Leadership Role</CardDescription>
+                      <CardTitle className="text-2xl mb-2">Director of Programs</CardTitle>
+                      <CardDescription className="text-base">Full-Time | Multi-Market | Reports to Founder/Executive Director</CardDescription>
                     </div>
                     <Briefcase className="h-8 w-8 text-primary flex-shrink-0" />
                   </div>
@@ -223,81 +223,115 @@ export default function CareersPage() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-2">The Opportunity</h4>
                     <p className="text-muted-foreground">
-                      Join Queen Ventures as Director of Development & Operations to scale our Mission Forward Initiative and expand our impact across Georgia, Hawaii, and Texas. You'll lead program development, build strategic partnerships with community organizations and employers, manage operations across multiple markets, and help us serve more foster youth and veterans. This is a mission-driven leadership role where your passion for community transformation directly impacts lives. You'll work alongside our founder on strategic growth while we maintain centralized financial management.
+                      Queen Ventures Community Development Association is seeking a dynamic and experienced Director of Programs to lead the design, implementation, and growth of our Mission Forward Initiative across Georgia, Hawaii, and Texas. Reporting directly to the Founder and Executive Director, you will serve as the operational and programmatic leader of the organization — overseeing all program delivery, staff and volunteer management, community partnerships, and strategic expansion. This is a senior leadership role for a mission-driven professional who believes deeply in the potential of foster youth and veterans and is committed to building sustainable pathways to economic opportunity and housing stability.
                     </p>
                   </div>
 
                   <div>
                     <h4 className="font-semibold text-foreground mb-3">Core Responsibilities</h4>
-                    <ul className="space-y-2 text-muted-foreground">
-                      <li className="flex gap-3">
-                        <span className="text-primary mt-1">▸</span>
-                        <span>Expand Mission Forward Initiative across Georgia, Hawaii, and Texas—recruit participants, manage program delivery, track outcomes</span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-primary mt-1">▸</span>
-                        <span>Build partnerships with employers, vocational training providers, housing organizations, and community agencies</span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-primary mt-1">▸</span>
-                        <span>Oversee day-to-day operations across multiple markets—staff management, program quality, participant support</span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-primary mt-1">▸</span>
-                        <span>Develop and execute strategic plans for organizational growth and market expansion</span>
-                      </li>
-                      <li className="flex gap-3">
-                        <span className="text-primary mt-1">▸</span>
-                        <span>Collaborate with founder on mission strategy, community impact, and long-term vision</span>
-                      </li>
-                    </ul>
+                    <div className="space-y-5 text-muted-foreground">
+                      <div>
+                        <p className="font-medium text-foreground mb-1">Program Leadership & Strategy</p>
+                        <ul className="space-y-2">
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Design, implement, and continuously improve all Mission Forward program components — including housing intake, AI reskilling curriculum, financial literacy training, and employment placement services</span></li>
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Develop measurable program outcomes and key performance indicators; prepare quarterly impact reports for the board and stakeholders</span></li>
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Lead strategic planning for program expansion into new markets and participant cohorts</span></li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-medium text-foreground mb-1">Team & Operations Management</p>
+                        <ul className="space-y-2">
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Recruit, hire, train, and supervise program staff, case managers, instructors, and volunteers across all three markets</span></li>
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Conduct regular performance evaluations, professional development planning, and team-building initiatives to maintain a high-performing, mission-aligned culture</span></li>
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Manage day-to-day operations across Georgia, Hawaii, and Texas — ensuring program quality, compliance, and participant satisfaction at each site</span></li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-medium text-foreground mb-1">Partnership & Community Engagement</p>
+                        <ul className="space-y-2">
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Build and maintain strategic partnerships with employers, workforce development agencies, housing authorities, veterans' services organizations, and foster care systems</span></li>
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Negotiate and execute MOUs, referral agreements, and employer partnership contracts to create job placement pipelines for program graduates</span></li>
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Represent Queen Ventures at community events, coalitions, conferences, and stakeholder meetings as the organizational face of our programs</span></li>
+                        </ul>
+                      </div>
+                      <div>
+                        <p className="font-medium text-foreground mb-1">Organizational Development</p>
+                        <ul className="space-y-2">
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Collaborate with the Founder/ED on organizational strategy, mission evolution, and long-term growth planning</span></li>
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Develop and maintain program policies, procedures, and participant handbooks to ensure consistent, high-quality service delivery</span></li>
+                          <li className="flex gap-3"><span className="text-primary mt-1">▸</span><span>Support grant reporting and compliance by providing accurate program data, participant outcomes, and narrative documentation to the Founder/ED</span></li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
 
                   <div>
+                    <h4 className="font-semibold text-foreground mb-3">Education Requirements</h4>
+                    <div className="space-y-2 text-muted-foreground mb-5">
+                      <p><span className="font-medium text-foreground">Required:</span> Bachelor's degree in Social Work, Public Administration, Nonprofit Management, Human Services, Education, or a closely related field.</p>
+                      <p><span className="font-medium text-foreground">Preferred:</span> Master's degree (MSW, MPA, MBA, or equivalent) in a relevant discipline. Candidates with 7+ years of progressive nonprofit leadership experience may be considered in lieu of an advanced degree.</p>
+                    </div>
+
                     <h4 className="font-semibold text-foreground mb-3">Preferred Experience</h4>
                     <ul className="space-y-2 text-muted-foreground">
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>5+ years in nonprofit leadership, community development, or social impact organizations</span>
+                        <span>5–7 years of progressive leadership in nonprofit program management, community development, or social services, with at least 2 years in a director-level or equivalent role</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Experience managing programs serving vulnerable populations (foster youth, veterans, low-income communities)</span>
+                        <span>Demonstrated experience designing, launching, and scaling programs serving vulnerable populations — particularly foster youth, veterans, or justice-involved individuals</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Track record building partnerships with employers, government agencies, and community organizations</span>
+                        <span>Proven track record building institutional partnerships with employers, government agencies, workforce development boards, and community-based organizations</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Experience with affordable housing, workforce development, or financial literacy programs</span>
+                        <span>Experience supervising and developing multi-site teams, including staff, volunteers, and contractors across geographically dispersed locations</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-primary mt-1">▸</span>
-                        <span>Ability to manage operations across multiple locations and scale programs</span>
+                        <span>Background in affordable housing, workforce development, financial literacy, or technology training programs strongly preferred</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary mt-1">▸</span>
+                        <span>Familiarity with program evaluation frameworks, outcome measurement, and data-driven decision-making</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-primary mt-1">▸</span>
+                        <span>Strong written and verbal communication skills; ability to represent the organization to diverse audiences including community members, government officials, and corporate partners</span>
                       </li>
                     </ul>
                   </div>
 
                   <div>
-                    <h4 className="font-semibold text-foreground mb-2">Compensation</h4>
-                    <p className="text-muted-foreground mb-3">Competitive nonprofit salary with benefits:</p>
+                    <h4 className="font-semibold text-foreground mb-2">Compensation & Benefits</h4>
+                    <p className="text-muted-foreground mb-3">This position offers an above-market compensation package for the nonprofit sector, reflecting the seniority and scope of the role:</p>
                     <ul className="space-y-2 text-muted-foreground">
                       <li className="flex gap-3">
                         <span className="text-secondary mt-1">•</span>
-                        <span>Salary: $80K–$120K (based on experience)</span>
+                        <span><strong>Base Salary:</strong> $52,000/year ($1,000/week) — above the FLSA exempt threshold; classified as salaried exempt executive</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-secondary mt-1">•</span>
-                        <span>Health insurance, retirement, and professional development</span>
+                        <span><strong>Housing Stipend:</strong> $3,000/month ($36,000/year) — provided to support program site residency requirements</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-secondary mt-1">•</span>
-                        <span>Performance bonuses tied to program growth and impact metrics</span>
+                        <span><strong>Total Annual Package:</strong> ~$88,000 — above the national median for Director of Programs at nonprofits in the $2M–$10M budget range</span>
                       </li>
                       <li className="flex gap-3">
                         <span className="text-secondary mt-1">•</span>
-                        <span>Remote-first with travel to Georgia, Hawaii, and Texas as needed</span>
+                        <span><strong>Benefits:</strong> Health insurance, 20 days PTO, 10 paid holidays, professional development budget, and 401(k) eligibility after 90 days</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-secondary mt-1">•</span>
+                        <span><strong>Performance Bonuses:</strong> Tied to program enrollment growth, participant employment outcomes, and organizational expansion milestones</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="text-secondary mt-1">•</span>
+                        <span><strong>Location:</strong> Multi-site role with primary residency at a Queen Ventures program site; travel between Georgia, Hawaii, and Texas required</span>
                       </li>
                     </ul>
                   </div>
@@ -310,7 +344,7 @@ export default function CareersPage() {
                   </div>
 
                   <div className="pt-4">
-                    <a href="mailto:info@queenventures.org?subject=Director%20of%20Development%20%26%20Operations%20–%20Application">
+                    <a href="mailto:info@queenventures.org?subject=Director%20of%20Programs%20–%20Application">
                       <Button className="w-full gap-2 bg-primary hover:bg-primary/90">
                         <Mail className="h-4 w-4" />
                         Apply Now
@@ -340,30 +374,30 @@ export default function CareersPage() {
             
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-foreground">Capital Raisers & Deal Operators</h3>
+                <h3 className="text-xl font-semibold text-foreground">A Heart for the Community</h3>
                 <p className="text-muted-foreground">
-                  You have a proven track record closing capital deals. You're not an administrator—you're a strategist who understands blended finance, CDFI landscapes, and government funding programs.
+                  Above all else, you believe in the dignity and potential of foster youth and veterans. You understand the systemic barriers they face, and you're motivated by the opportunity to dismantle them — not just professionally, but personally.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-foreground">Mission-Driven Professionals</h3>
+                <h3 className="text-xl font-semibold text-foreground">An Experienced Program Builder</h3>
                 <p className="text-muted-foreground">
-                  You care about affordable housing and economic opportunity. You want your work to create real impact for veterans and foster youth while building sustainable, scalable solutions.
+                  You've built and scaled programs before. You know how to turn a vision into a curriculum, a curriculum into a cohort, and a cohort into a community of thriving graduates. You measure success in lives changed, not just outputs reported.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-foreground">Autonomous Leaders</h3>
+                <h3 className="text-xl font-semibold text-foreground">A Relationship Builder</h3>
                 <p className="text-muted-foreground">
-                  You thrive with high autonomy and high accountability. You can work independently, manage complex relationships, and execute on your own initiative without constant oversight.
+                  You build trust with everyone — from program participants to corporate partners to government officials. You know that sustainable impact is built on relationships, and you invest in them with intention and consistency.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-foreground">Tech-Forward Innovators</h3>
+                <h3 className="text-xl font-semibold text-foreground">A Collaborative Leader</h3>
                 <p className="text-muted-foreground">
-                  You're open to leveraging AI and automation to increase efficiency and scale. You learn quickly, adapt to new tools, and focus on directing outcomes rather than doing everything manually.
+                  You lead with empathy and clarity. You can manage a team across multiple time zones and sites, hold people accountable with respect, and create an environment where staff and volunteers feel valued and motivated to do their best work.
                 </p>
               </div>
             </div>
@@ -376,13 +410,13 @@ export default function CareersPage() {
             <div className="max-w-3xl mx-auto text-center bg-gradient-to-br from-primary/10 to-secondary/10 p-12 rounded-2xl">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Ready to Make an Impact?</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Join our team and help build the future of affordable housing and workforce development. We're moving fast and looking for experienced partners who can execute at scale.
+                If you're passionate about serving foster youth and veterans, experienced in nonprofit program leadership, and ready to make a measurable difference — we want to hear from you. Send your resume and a brief cover letter explaining why this mission resonates with you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="mailto:info@queenventures.org?subject=Capital%20Partner%20–%20Application">
+                <a href="mailto:info@queenventures.org?subject=Director%20of%20Programs%20–%20Application">
                   <Button className="gap-2 bg-primary hover:bg-primary/90">
                     <Mail className="h-4 w-4" />
-                    Apply for Capital Partner Role
+                    Apply for Director of Programs
                   </Button>
                 </a>
                 <a href="mailto:info@queenventures.org?subject=Career%20Inquiry">
@@ -390,7 +424,7 @@ export default function CareersPage() {
                 </a>
               </div>
               <p className="text-sm text-muted-foreground mt-6">
-                <strong>Email:</strong> info@queenventures.org | <strong>Subject:</strong> Capital Partner – Application
+                <strong>Email:</strong> info@queenventures.org | <strong>Subject:</strong> Director of Programs – Application
               </p>
             </div>
           </div>
