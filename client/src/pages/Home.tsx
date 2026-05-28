@@ -139,7 +139,7 @@ export default function HomePage() {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310419663031027310/GS3eerfLCARChtn3VvPsEL/pasted_file_9JiSZs_image_47fabb40.png)',
+            backgroundImage: 'url(/images/hero-background.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -316,7 +316,7 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/TiQPbVcinZgOEkYR.jpg" 
+                src="/images/mentorship.jpg" 
                 alt="Veteran-Foster Youth Mentorship" 
                 className="rounded-2xl shadow-2xl w-full h-auto"
               />
@@ -447,7 +447,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="relative rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/PSuyXUzpsopCCVqZ.png" 
+                  src="/images/property-hawaii.png" 
                   alt="Luxury Beachfront Property - Hawaii" 
                   className="w-full h-64 object-cover"
                 />
@@ -461,7 +461,7 @@ export default function HomePage() {
 
               <div className="relative rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/iLoSuIoXbyfkeRMM.jpeg" 
+                  src="/images/property-georgia.jpeg" 
                   alt="Multi-Unit Residential Building - Georgia" 
                   className="w-full h-64 object-cover"
                 />
@@ -475,7 +475,7 @@ export default function HomePage() {
 
               <div className="relative rounded-2xl overflow-hidden shadow-lg">
                 <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/ImDJTNWDSQwFKNho.png" 
+                  src="/images/property-family.png" 
                   alt="Residential Home with Amenities" 
                   className="w-full h-64 object-cover"
                 />
@@ -543,7 +543,7 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-12">
               <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031027310/FKjXBsLzRIxyHpFX.jpg" 
+                src="/images/grantflow-preview.jpg" 
                 alt="Grantflow Software Preview" 
                 className="w-full h-auto"
               />

@@ -1,8 +1,0 @@
-{
-  "query": "UPDATE newsletter_editions \nSET sentAt = CASE \n  WHEN title LIKE '%Trump%AI%' THEN '2025-12-13 10:00:00'\n  WHEN title LIKE '%Tech Layoffs%' THEN '2025-12-10 10:00:00'\n  WHEN title LIKE '%Elon Musk%Optional Work%' THEN '2025-11-20 10:00:00'\n  WHEN title LIKE '%xAI%Grok%' THEN '2025-11-18 10:00:00'\n  WHEN title LIKE '%Building Credit%' THEN '2025-10-15 10:00:00'\n  WHEN title LIKE '%Foster Care to Tech Success%' THEN '2025-09-20 10:00:00'\n  WHEN title LIKE '%Mission Forward%Free Tech Training%' THEN '2026-01-15 10:00:00'\n  WHEN title LIKE '%Queen Ventures%Community Impact%' THEN '2026-01-10 10:00:00'\n  ELSE sentAt\nEND;",
-  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3tew2ahF4Y5KvBa.9beb329cb281 --database GS3eerfLCARChtn3VvPsEL --execute UPDATE newsletter_editions \nSET sentAt = CASE \n  WHEN title LIKE '%Trump%AI%' THEN '2025-12-13 10:00:00'\n  WHEN title LIKE '%Tech Layoffs%' THEN '2025-12-10 10:00:00'\n  WHEN title LIKE '%Elon Musk%Optional Work%' THEN '2025-11-20 10:00:00'\n  WHEN title LIKE '%xAI%Grok%' THEN '2025-11-18 10:00:00'\n  WHEN title LIKE '%Building Credit%' THEN '2025-10-15 10:00:00'\n  WHEN title LIKE '%Foster Care to Tech Success%' THEN '2025-09-20 10:00:00'\n  WHEN title LIKE '%Mission Forward%Free Tech Training%' THEN '2026-01-15 10:00:00'\n  WHEN title LIKE '%Queen Ventures%Community Impact%' THEN '2026-01-10 10:00:00'\n  ELSE sentAt\nEND;",
-  "returncode": 1,
-  "logs": [
-    "ERROR 1054 (42S22) at line 1: Unknown column 'sentAt' in 'field list'"
-  ]
-}
