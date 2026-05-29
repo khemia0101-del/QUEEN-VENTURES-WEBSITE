@@ -1,24 +1,16 @@
 {
-  "buildCommand": "pnpm install && pnpm run build",
-  "outputDirectory": "dist/public",
-  "framework": null,
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
-{
     "buildCommand": "pnpm install && pnpm run build",
-    "outputDirectory": "dist/public",
-    "framework": null,
-    "functions": {
-          "api/index.ts": {
-                  "runtime": "@vercel/node@3.0.0",
-                  "maxDuration": 10
-          }
-    },
-    "rewrites": [
-          { "source": "/api/(.*)", "destination": "/api/index.ts" },
-          { "source": "/(.*)", "destination": "/index.html" }
-    ]
+      "outputDirectory": "dist/public",
+        "framework": null,
+          "functions": {
+              "api/index.ts": {
+                    "runtime": "@vercel/node@3.0.0",
+                          "maxDuration": 10
+                              }
+                                },
+                                  "rewrites": [
+                                      { "source": "/api/(.*)", "destination": "/api/index.ts" },
+                                          { "source": "/(.*)", "destination": "/index.html" }
+                                            ]
+                                            }
 }
